@@ -13,7 +13,7 @@ const Destination = () => {
     
  return (
     <div>
-      <div className='h-[805px] pt-[180px]'>
+      <div className='h-[805px] mt-[180px]'>
         {/* ----------- section heading and icons div ------------- */}
         <div className='flex justify-between'>
             {/* ------- heading div --------- */}
