@@ -5,7 +5,7 @@ import icon3 from '../../assets/images/icon-3.png'
 
 const Features = () => {
   return (
-    <div className='pt-[180px] pb-[50px]'>
+    <div className='pt-[180px]'>
       <div className='h-[569px]'>
         {/* ------------ heading div ----------- */}
         <div className='w-[848px] mx-auto text-center'>
