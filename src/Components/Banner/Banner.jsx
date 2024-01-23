@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   return (
@@ -46,7 +47,7 @@ const Banner = () => {
               <input type="text" id='guests' placeholder='Guests' className='border w-[160px] h-[47px] rounded-[100px] px-5 py-2'/>
             </div>
             <button className='w-[180px] h-[47px] font-semibold text-lg text-white rounded-[100px] bg-gradient-to-r from-[#DD727D] to-[#834047] mt-[32px]'>
-              Explore Plans
+              <Link to='/travelPlanePage'> Explore Plans</Link>              
             </button>
          </form>
       </div>
