@@ -1,9 +1,6 @@
 import React from 'react';
 import { LuRefreshCcw } from "react-icons/lu";
-import { FaPlus, FaStar } from 'react-icons/fa';
-import img1 from '../../assets/images/plane-1.png'
-import img2 from '../../assets/images/plane-2.png'
-import img3 from '../../assets/images/plane-3.png'
+import { FaStar } from 'react-icons/fa';
 import { GoCheckCircle } from 'react-icons/go';
 import { IoChevronDownSharp } from "react-icons/io5";
 import { AiOutlinePlus } from "react-icons/ai";
@@ -32,7 +29,7 @@ const TravelPlanPage = () => {
       <div className='flex gap-6 mt-[40px]'>
         {/* -------- first slide --------- */}
          <div className='w-[848px]'>
-           <img src={img1} alt="hotel image" className=' h-[470px]'/>
+           <img src='https://i.ibb.co/w6GMFnT/plane-1.png' alt="hotel image" className=' h-[470px]'/>
            {/* ------------- overview div ------------- */}
            <div className='mt-[40px]'>
              <h2 className='text-[25px] leading-[31px] font-bold'>Overview</h2>
@@ -89,8 +86,8 @@ const TravelPlanPage = () => {
          </div>
          {/* -------- second slide --------- */}
          <div className='w-[412px]'>
-           <img src={img2} alt="hotel image" className=' h-[223px] mb-6'/>
-           <img src={img3} alt="hotel image" className=' h-[223px]'/>
+           <img src='https://i.ibb.co/FJHSvq7/plane-2.png' alt="hotel image" className=' h-[223px] mb-6'/>
+           <img src='https://i.ibb.co/x5rmYRb/plane-3.png' alt="hotel image" className=' h-[223px]'/>
            {/* --------- checkout div -------------- */}
            <div className='h-[620px] rounded-[20px] border bg-white mt-[40px] pt-6 px-[26px] pb-[27px]'>
              <h3 className='text-lg font-bold'>$25 per night</h3>
