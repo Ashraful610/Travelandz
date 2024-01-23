@@ -6,8 +6,8 @@ import { RiInstagramFill } from "react-icons/ri";
 
 const Footer = () => {
   return (
-    <div className='h-[268px] bg-[#ECECED] p-[60px] '>
-      <div className='w-[400px] mx-auto flex flex-col items-center'>
+    <div className='h-[268px] bg-[#ECECED] py-[60px] md:p-[60px] '>
+      <div className='w-[393px] md:w-[400px] md:mx-auto flex flex-col items-center'>
          <img src={logo} alt="logo" className='w-[172px] h-[35px] object-cover'/>
          <div className='text-[#5F5F60] flex gap-[30px] mt-[33px] text-center px-3'>
            <FaFacebookF /> 

@@ -7,6 +7,7 @@ import img3 from '../../assets/images/plane-3.png'
 import { GoCheckCircle } from 'react-icons/go';
 import { IoChevronDownSharp } from "react-icons/io5";
 import { AiOutlinePlus } from "react-icons/ai";
+import RecomandedAccordion from '../../Components/RecomandedAccordion/RecomandedAccordion';
 
 const TravelPlanPage = () => {
   return (
@@ -70,6 +71,20 @@ const TravelPlanPage = () => {
                     <GoCheckCircle className='text-xl '/> Free WiFi all rooms
                 </h3>
              </div>
+           </div>
+           {/* ----------- recomandations div ------------- */}
+           <div>
+             {/* ------------- heading div ---------- */}
+             <div className='mb-[40px]'>
+              <h2 className='text-[30px] font-bold leading-[37px] mb-4'>
+                Personalized Recommendations For You
+              </h2>
+              <p>
+                I have added recommended experiences for you, please feel free to add or remove new ones
+              </p>
+             </div>
+             {/* -------- recomanded Accordion ---------- */}
+             <RecomandedAccordion/>
            </div>
          </div>
          {/* -------- second slide --------- */}

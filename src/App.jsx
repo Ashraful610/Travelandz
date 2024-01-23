@@ -6,9 +6,9 @@ import Navbar from './Components/Navbar/Navbar'
 function App() {
 
   return (
-    <div className='w-[1440px] mx-auto bg-[#FBFBFB]'>
+    <div className='w-[393px] md:w-[1440px] mx-auto bg-[#FBFBFB]'>
       <Navbar/>
-      <div className='w-[1284px] mx-auto'>
+      <div className='w-[393px] md:w-[1284px] mx-auto'>
         <Outlet/>
       </div>
       <Footer/>

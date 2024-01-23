@@ -1,32 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
-import cardImage1 from '../../assets/images/card-1.png'
-import cardImage2 from '../../assets/images/card-2.png'
-import cardImage3 from '../../assets/images/card-3.png'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination , HashNavigation } from 'swiper/modules';
+import { GoArrowRight } from 'react-icons/go';
 
 const Destination = () => {
+  const [slidesPerView, setSlidesPerView] = useState(1);
+  const [space , setSpace] = useState(24)
+
+    useEffect(() => {
+        const updateSlidesPerView = () => {
+            const width = window.innerWidth;
+            if(width >= 768) {
+                setSlidesPerView(3);
+            }
+            else if (width <= 576){
+              setSpace(2)
+                setSlidesPerView(1)
+            }
+        };
+        updateSlidesPerView();
+        window.addEventListener('resize', updateSlidesPerView);
+        window.removeEventListener('resize', updateSlidesPerView);
+    }, []);
     
  return (
     <div>
-      <div className='h-[805px] mt-[180px]'>
+      <div className=' mx-auto h-fit md:h-[805px] mt-[100px] md:mt-[180px]'>
         {/* ----------- section heading and icons div ------------- */}
         <div className='flex justify-between'>
             {/* ------- heading div --------- */}
-           <div className='w-[872px]'>
-              <h3 className='text-[35px] font-bold'>
+           <div className='w-[353px] mx-auto md:m-0 md:w-[872px] '>
+              <h3 className='text-[25px] md:text-[35px] font-bold pr-2'>
                 Discover Unique Destinations with AI Trip Itinerary.
               </h3>
-              <p className='text-lg w-[848px] mt-6'>
+              <p className='text-lg  w-[353px] md:w-[848px] mt-6'>
                 Explore our AI's handpicked selection of the top 10 unique cities and create lifelong vacation's  memories using AI trip planner. Use Travelandz AI planner to experience local culture and nature in these breathtaking destinations.
               </p>
            </div>
            {/* ------ arrow icons div ---------- */}
-           <div className='w-[164px] flex gap-6'>
+           <div className='w-[164px] flex gap-6 md:flex hidden'>
               <div className='w-[70px] h-[70px] bg-[#DB6B76] rounded-full flex justify-center items-center '>
                <IoIosArrowRoundBack className='text-white text-4xl'/>  
               </div>
@@ -37,55 +53,91 @@ const Destination = () => {
         </div>
         {/* ------------- destination card slider --------- */}
         <Swiper
-         slidesPerView={3}
-         spaceBetween={24}
+         slidesPerView={slidesPerView}
+         spaceBetween={space}
          loop={true}
          pagination={{
           clickable: true,
          }}
          modules={[Pagination,HashNavigation]}
-         className="mySwiper mt-[60px]"
+         className="mySwiper mt-10 md:mt-[60px] w-[350px] md:w-full"
          
         >
-            <SwiperSlide className='h-[630px]'> 
-              <div className='h-[540px] bg-[url(https://i.ibb.co/zXBJ82M/card-1.png)] relative'>  
-                <div className='absolute bottom-0 left-0 px-5  bg-gradient-to-b from-black/0 to-black w-full h-[100px] rounded-b-[20px] flex items-center'>
+            <SwiperSlide className='pb-[50px]'> 
+              <div className='h-[540px] rounded-[20px] bg-[url(https://i.ibb.co/zXBJ82M/card-1.png)] bg-no-repeat bg-cover relative'>  
+                <div className='absolute bottom-0 left-0 px-[27.18px] md:px-5  bg-gradient-to-b from-black/0 to-black w-full h-[250px] md:h-[100px] rounded-b-[20px] flex flex-col justify-center'>
                   <h2 className='text-[30px] font-bold text-white'>Dubai</h2>
+                  <p className='text-white text-lg md:hidden leading-[22px]'>
+                    Immerse yourself in the modern city known for its impressive skyline, luxury shopping, and man-made attractions such as the iconic Burj Khalifa, the world's tallest building.
+                  </p>
+                  <p className='text-lg font-semibold text-white mt-[12px] md:hidden'>
+                    Plane your trpe <GoArrowRight className='inline text-xl' />
+                  </p>
                 </div>
               </div> 
             </SwiperSlide>
-            <SwiperSlide className='h-[630px]'> 
-              <div className='h-[540px] bg-[url(https://i.ibb.co/kxm9NfG/card-2.png)] relative'>  
-                <div className='absolute bottom-0 left-0 px-5  bg-gradient-to-b from-black/0 to-black w-full h-[100px] rounded-b-[20px] flex items-center'>
+            <SwiperSlide className='pb-[50px]'> 
+              <div className='h-[540px] rounded-[20px] bg-[url(https://i.ibb.co/kxm9NfG/card-2.png)] bg-no-repeat bg-cover relative'>  
+                <div className='absolute bottom-0 left-0 px-[27.18px] md:px-5  bg-gradient-to-b from-black/0 to-black w-full h-[250px] md:h-[100px] rounded-b-[20px] flex flex-col justify-center'>
                   <h2 className='text-[30px] font-bold text-white'>Petra</h2>
+                  <p className='text-white text-lg md:hidden leading-[22px]'>
+                    Immerse yourself in the modern city known for its impressive skyline, luxury shopping, and man-made attractions such as the iconic Burj Khalifa, the world's tallest building.
+                  </p>
+                  <p className='text-lg font-semibold text-white mt-[12px] md:hidden'>
+                    Plane your trpe <GoArrowRight className='inline text-xl' />
+                  </p>
                 </div>
               </div> 
             </SwiperSlide>
-            <SwiperSlide className='h-[630px]'> 
-              <div className='h-[540px] bg-[url(https://i.ibb.co/R45rYtP/card-3.png)] relative'>  
-                <div className='absolute bottom-0 left-0 px-5  bg-gradient-to-b from-black/0 to-black w-full h-[100px] rounded-b-[20px] flex items-center'>
+            <SwiperSlide className='pb-[50px]'> 
+              <div className='h-[540px] rounded-[20px] bg-[url(https://i.ibb.co/R45rYtP/card-3.png)] bg-no-repeat bg-cover relative'>  
+                <div className='absolute bottom-0 left-0 px-[27.18px] md:px-5  bg-gradient-to-b from-black/0 to-black w-full h-[250px] md:h-[100px] rounded-b-[20px] flex flex-col justify-center'>
                   <h2 className='text-[30px] font-bold text-white'>Istanbul</h2>
+                  <p className='text-white text-lg md:hidden leading-[22px]'>
+                    Immerse yourself in the modern city known for its impressive skyline, luxury shopping, and man-made attractions such as the iconic Burj Khalifa, the world's tallest building.
+                  </p>
+                  <p className='text-lg font-semibold text-white mt-[12px] md:hidden'>
+                    Plane your trpe <GoArrowRight className='inline text-xl' />
+                  </p>
                 </div>
               </div> 
             </SwiperSlide>
-            <SwiperSlide className='h-[630px]'> 
-              <div className='h-[540px] bg-[url(https://i.ibb.co/zXBJ82M/card-1.png)] relative'>  
-                <div className='absolute bottom-0 left-0 px-5  bg-gradient-to-b from-black/0 to-black w-full h-[100px] rounded-b-[20px] flex items-center'>
+            <SwiperSlide className='pb-[50px]'> 
+              <div className='h-[540px] rounded-[20px] bg-[url(https://i.ibb.co/zXBJ82M/card-1.png)] bg-no-repeat bg-cover relative'>  
+                <div className='absolute bottom-0 left-0 px-[27.18px] md:px-5  bg-gradient-to-b from-black/0 to-black w-full h-[250px] md:h-[100px] rounded-b-[20px] flex flex-col justify-center'>
                   <h2 className='text-[30px] font-bold text-white'>Dubai</h2>
+                  <p className='text-white text-lg md:hidden leading-[22px]'>
+                    Immerse yourself in the modern city known for its impressive skyline, luxury shopping, and man-made attractions such as the iconic Burj Khalifa, the world's tallest building.
+                  </p>
+                  <p className='text-lg font-semibold text-white mt-[12px] md:hidden'>
+                    Plane your trpe <GoArrowRight className='inline text-xl' />
+                  </p>
                 </div>
               </div> 
             </SwiperSlide>
-            <SwiperSlide className='h-[630px]'> 
-              <div className='h-[540px] bg-[url(https://i.ibb.co/kxm9NfG/card-2.png)] relative'>  
-                <div className='absolute bottom-0 left-0 px-5  bg-gradient-to-b from-black/0 to-black w-full h-[100px] rounded-b-[20px] flex items-center'>
+            <SwiperSlide className='pb-[50px]'> 
+              <div className='h-[540px] rounded-[20px] bg-[url(https://i.ibb.co/kxm9NfG/card-2.png)] bg-no-repeat bg-cover relative'>  
+                <div className='absolute bottom-0 left-0 px-[27.18px] md:px-5  bg-gradient-to-b from-black/0 to-black w-full h-[250px] md:h-[100px] rounded-b-[20px] flex flex-col justify-center'>
                   <h2 className='text-[30px] font-bold text-white'>Petra</h2>
+                  <p className='text-white text-lg md:hidden leading-[22px]'>
+                    Immerse yourself in the modern city known for its impressive skyline, luxury shopping, and man-made attractions such as the iconic Burj Khalifa, the world's tallest building.
+                  </p>
+                  <p className='text-lg font-semibold text-white mt-[12px] md:hidden'>
+                    Plane your trpe <GoArrowRight className='inline text-xl' />
+                  </p>
                 </div>
               </div> 
             </SwiperSlide>
-            <SwiperSlide className='h-[630px]'> 
-              <div className='h-[540px] bg-[url(https://i.ibb.co/R45rYtP/card-3.png)] relative'>  
-                <div className='absolute bottom-0 left-0 px-5  bg-gradient-to-b from-black/0 to-black w-full h-[100px] rounded-b-[20px] flex items-center'>
+            <SwiperSlide className='pb-[50px]'> 
+              <div className='h-[540px] rounded-[20px] bg-[url(https://i.ibb.co/R45rYtP/card-3.png)] bg-no-repeat bg-cover relative'>  
+                <div className='absolute bottom-0 left-0 px-[27.18px] md:px-5  bg-gradient-to-b from-black/0 to-black w-full h-[250px] md:h-[100px] rounded-b-[20px] flex flex-col justify-center'>
                   <h2 className='text-[30px] font-bold text-white'>Istanbul</h2>
+                  <p className='text-white text-lg md:hidden leading-[22px]'>
+                    Immerse yourself in the modern city known for its impressive skyline, luxury shopping, and man-made attractions such as the iconic Burj Khalifa, the world's tallest building.
+                  </p>
+                  <p className='text-lg font-semibold text-white mt-[12px] md:hidden'>
+                    Plane your trpe <GoArrowRight className='inline text-xl' />
+                  </p>
                 </div>
               </div> 
             </SwiperSlide>

@@ -6,7 +6,7 @@ import ContactForm from '../../Components/ContactForm/ContactForm';
 
 const HomePage = () => {
  return (
-    <div>
+    <div className='h-fit'>
         <Banner/>
         <Features/>
         <Destination/>
