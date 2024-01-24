@@ -1,6 +1,5 @@
 import React from "react";
 import Activits from "../Activits/Activits";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
  
  
@@ -10,7 +9,7 @@ const RecomandedAccordion = () =>{
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
  
   return (
-    <div className="mb-[180px]">
+    <div className="">
       <div>
           <div className={`h-[72px] flex justify-between items-center border-none px-6 
           ${open === 1 ? 'rounded-t-[20px] bg-[#F2F2F2]': 'rounded-[20px] mb-6 bg-white'} `} onClick={()=>handleOpen(1)}

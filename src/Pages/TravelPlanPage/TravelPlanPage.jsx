@@ -4,11 +4,12 @@ import { FaStar } from 'react-icons/fa';
 import { GoCheckCircle } from 'react-icons/go';
 import { IoChevronDownSharp } from "react-icons/io5";
 import { AiOutlinePlus } from "react-icons/ai";
+import { TbGridDots } from "react-icons/tb";
 import RecomandedAccordion from '../../Components/RecomandedAccordion/RecomandedAccordion';
 
 const TravelPlanPage = () => {
   return (
-    <div className=''>
+    <div className="font-['Plus Jakarta Sans']">
       {/* ------- heading div -------- */}
       <div className='flex justify-between mt-[42px]'>
         <div>
@@ -26,51 +27,53 @@ const TravelPlanPage = () => {
         </div>
       </div>
       {/* -------- hotel image and details  div ------------ */}
-      <div className='flex gap-6 mt-[40px]'>
-        {/* -------- first slide --------- */}
-         <div className='w-[848px]'>
+      <div className='flex gap-6 mt-[40px] h-[2180px]'>
+         {/* -------- first slide --------- */}
+         <div className='w-[848px]  h-[1875px] '>
            <img src='https://i.ibb.co/w6GMFnT/plane-1.png' alt="hotel image" className=' h-[470px]'/>
            {/* ------------- overview div ------------- */}
-           <div className='mt-[40px]'>
-             <h2 className='text-[25px] leading-[31px] font-bold'>Overview</h2>
-             <p className='text-lg mt-6'>
-              Fuga omnis consequuntur quia cupiditate aut nulla. Blanditiis quam veritatis. Commodi quia eum quia asperiores aliquid id. Officia explicabo fugit sequi ipsa ut quo repellat. Quidem magni adipisci non voluptate modi modi et earum unde. Soluta consectetur eos eos ea vel mollitia consequatur qui ut. <br /> <br />
+           <div className='h-[530px] mb-[68px] mt-[40px]'>
+              <div className='h-[330px]'>
+                <h2 className='text-[25px] leading-[31px] font-bold'>Overview</h2>
+                <p className="text-zinc-700 text-lg font-normal mt-6">
+                  Fuga omnis consequuntur quia cupiditate aut nulla. Blanditiis quam veritatis. Commodi quia eum quia asperiores aliquid id. Officia explicabo fugit sequi ipsa ut quo repellat. Quidem magni adipisci non voluptate modi modi et earum unde. Soluta consectetur eos eos ea vel mollitia consequatur qui ut. <br /> <br />
 
-              Ut dolorem consequatur eligendi. Consectetur commodi ratione. Commodi fuga numquam aut
-              <br/>deleniti hic. Commodi dolor excepturi et occaecati voluptas voluptatem. Minus dolorem <br />exercitationem. <br />
-              Fugiat quia omnis odit doloremque hic animi. Dolorem vel facilis quisquam illum modi beatae. Impedit sunt consectetur sed libero exercitationem exercitationem. Et et sunt. Et omnis in. Aut qui optio enim beatae excepturi ipsum facere non.
-             </p>
-           </div> 
-           <hr className='my-[40px]'/>
-           {/* ---------- facilities div ------ */}
-           <div className='mb-[64px]'>
-             <h2 className='font-bold text-[25px] leading-[31px]'>Facilities</h2>
-             <div className='grid grid-cols-4 grid-rows-2 gap-y-6 mt-6'>
-                <h3 className='flex items-center gap-4'>
-                    <GoCheckCircle className='text-xl '/> 24/7 Front desk
-                </h3>
-                <h3 className='flex items-center gap-4'>
-                    <GoCheckCircle className='text-xl '/> Valet parking
-                </h3>
-                <h3 className='flex items-center gap-4'>
-                    <GoCheckCircle className='text-xl '/> Swimming pool
-                </h3>
-                <h3 className='flex items-center gap-4'>
-                    <GoCheckCircle className='text-xl '/> Golf park
-                </h3>
-                <h3 className='flex items-center gap-4'>
-                    <GoCheckCircle className='text-xl '/> Airport pickup
-                </h3>
-                <h3 className='flex items-center gap-4'>
-                    <GoCheckCircle className='text-xl '/> Spa and Gym
-                </h3>
-                <h3 className='flex items-center gap-4'>
-                    <GoCheckCircle className='text-xl '/> Free WiFi all rooms
-                </h3>
-             </div>
+                  Ut dolorem consequatur eligendi. Consectetur commodi ratione. Commodi fuga numquam aut
+                  <br/>deleniti hic. Commodi dolor excepturi et occaecati voluptas voluptatem. Minus dolorem <br />exercitationem. <br />
+                  Fugiat quia omnis odit doloremque hic animi. Dolorem vel facilis quisquam illum modi beatae. Impedit sunt consectetur sed libero exercitationem exercitationem. Et et sunt. Et omnis in. Aut qui optio enim beatae excepturi ipsum facere non.
+                </p>
+              </div> 
+              <hr className='my-[40px]'/>
+              {/* ---------- facilities div ------ */}
+              <div className=' h-[120px]'>
+                <h2 className='font-bold text-[25px] leading-[31px]'>Facilities</h2>
+                <div className='grid grid-cols-4 grid-rows-2 gap-y-6 mt-6'>
+                    <h3 className='flex items-center gap-4'>
+                        <GoCheckCircle className='text-xl '/> 24/7 Front desk
+                    </h3>
+                    <h3 className='flex items-center gap-4'>
+                        <GoCheckCircle className='text-xl '/> Valet parking
+                    </h3>
+                    <h3 className='flex items-center gap-4'>
+                        <GoCheckCircle className='text-xl '/> Swimming pool
+                    </h3>
+                    <h3 className='flex items-center gap-4'>
+                        <GoCheckCircle className='text-xl '/> Golf park
+                    </h3>
+                    <h3 className='flex items-center gap-4'>
+                        <GoCheckCircle className='text-xl '/> Airport pickup
+                    </h3>
+                    <h3 className='flex items-center gap-4'>
+                        <GoCheckCircle className='text-xl '/> Spa and Gym
+                    </h3>
+                    <h3 className='flex items-center gap-4'>
+                        <GoCheckCircle className='text-xl '/> Free WiFi all rooms
+                    </h3>
+                </div>
+              </div>
            </div>
            {/* ----------- recomandations div ------------- */}
-           <div>
+           <div className='h-[874px] mb-[180px]'>
              {/* ------------- heading div ---------- */}
              <div className='mb-[40px]'>
               <h2 className='text-[30px] font-bold leading-[37px] mb-4'>
@@ -85,11 +88,17 @@ const TravelPlanPage = () => {
            </div>
          </div>
          {/* -------- second slide --------- */}
-         <div className='w-[412px]'>
+         <div className='w-[412px] h-[1875px]'>
            <img src='https://i.ibb.co/FJHSvq7/plane-2.png' alt="hotel image" className=' h-[223px] mb-6'/>
-           <img src='https://i.ibb.co/x5rmYRb/plane-3.png' alt="hotel image" className=' h-[223px]'/>
+           <div className='relative'>
+             <img src='https://i.ibb.co/x5rmYRb/plane-3.png' alt="hotel image" className=' h-[223px]'/>
+             <div className='w-[204px] h-[43px] rounded-[15px] bg-[#FFFFFF] absolute bottom-6 right-6 flex items-center gap-4 px-4 py-[10px]'>
+                <TbGridDots className='w-[19px] h-[19px]'/>
+                <h3 className='text-semibold text-lg'>Show all photos</h3>
+             </div>
+           </div>
            {/* --------- checkout div -------------- */}
-           <div className='h-[620px] rounded-[20px] border bg-white mt-[40px] pt-6 px-[26px] pb-[27px]'>
+           <div className='h-[620px] sticky top-5 checkout-div rounded-[20px] border bg-white mt-[40px] pt-6 px-[26px] pb-[27px]'>
              <h3 className='text-lg font-bold'>$25 per night</h3>
              <div className='w-[364px] h-[79px] rounded-[15px] border mt-4 flex'>
                 <div className='border-r w-2/4  px-4 py-[14px]'>

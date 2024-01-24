@@ -28,8 +28,8 @@ import { RiDeleteBin5Fill } from "react-icons/ri";
             <h3 className="text-[#EC6274] underline font-semibold text-lg">Add activity</h3>
           </button>
         </div>
-        {/* ---------- activiti card ----------- */}
-        <div className={`w-[387px] h-[294px] rounded-[15px] border mt-[26px] ${open === 1 ? 'block' : 'hidden'}`}>
+        {/* ---------- activiti card 1 ----------- */}
+        <div className={`w-[387px] h-[294px] rounded-[15px] border mt-[26px] ${open === 1 ? 'block ' : 'hidden'}`}>
           <div className="h-[140px] bg-[url(https://i.ibb.co/R4K43qn/images.jpg)] bg-cover rounded-t-[15px] bg-no-repeat object-cover p-4 relative">
             <div className="bg-red-500 w-8 h-8 rounded-full text-white flex justify-center items-center absolute right-4">
               <RiDeleteBin5Fill />
@@ -52,6 +52,7 @@ import { RiDeleteBin5Fill } from "react-icons/ri";
             <h2 className="text-[25px] font-bold mt-4">USD 344</h2>
           </div>
         </div>
+         {/* ---------- activiti card 1 ----------- */}
         <div className={`w-[387px] h-[294px] rounded-[15px] border mt-[26px] ${open === 2 ? 'block' : 'hidden'}`}>
           <div className="h-[140px] bg-[url(https://i.ibb.co/dgXNzCy/images-1.jpg)] bg-cover rounded-t-[15px] bg-no-repeat object-cover p-4 relative">
             <div className="bg-red-500 w-8 h-8 rounded-full text-white flex justify-center items-center absolute right-4">
@@ -75,6 +76,7 @@ import { RiDeleteBin5Fill } from "react-icons/ri";
             <h2 className="text-[25px] font-bold mt-4">USD 311</h2>
           </div>
         </div>
+         {/* ---------- activiti card 1 ----------- */}
         <div className={`w-[387px] h-[294px] rounded-[15px] border mt-[26px] ${open === 3 ? 'block' : 'hidden'}`}>
           <div className="h-[140px] bg-[url(https://i.ibb.co/dtCdVLw/download.jpg)] bg-cover rounded-t-[15px] bg-no-repeat object-cover p-4 relative">
             <div className="bg-red-500 w-8 h-8 rounded-full text-white flex justify-center items-center absolute right-4">
