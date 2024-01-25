@@ -47,7 +47,7 @@ const Destination = () => {
                <IoIosArrowRoundBack className='text-white text-4xl'/>  
               </div>
               <div className='w-[70px] h-[70px] border border-[#F1C4C8] rounded-full flex justify-center items-center '>
-               <IoIosArrowRoundForward className='text-white text-4xl text-[#DB6B76]'/>  
+               <IoIosArrowRoundForward className='text-4xl text-[#DB6B76]'/>  
               </div>
            </div>
         </div>
