@@ -22,7 +22,7 @@ const Features = () => {
             <div className='w-[350xp] h-[362px] md:w-[412px] md:h-[339px] rounded-[20px] border border-[#E5E5E580] bg-[#FFF] p-6'>
              <img src={icon1} alt="icons" className='w-[42px] h-[42px]'/>
              <h3 className='text-[25px] font-bold mt-8 mb-6'>Personalized Planning</h3>
-             <p className='text-lg h-[184px] '>
+             <p className='text-lg h-[161px] '>
                 Our AI-driven platform crafts unique travel plans tailored to your preferences, ensuring a unique experience that suits you. Share your plans with the Travelandz community to receive valuable suggestions and ideas from fellow travelers.
              </p>
             </div>
