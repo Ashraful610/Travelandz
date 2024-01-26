@@ -3,7 +3,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const ContactForm = () => {
   return (
-    <div className='py-[100px] md:py-[180px]'>
+    <div className='py-[100px] md:py-[180px]' id='contact'>
       <div className='h-[756px] w-[394px] md:w-[848px] mx-auto'>
         <div className='w-[353px] mx-auto md:w-full'>
           <h3 className='text-[25px] leading-[33px] md:text-[35px] font-bold leading-[44px] text-[#1B1B1E] md:text-center'>

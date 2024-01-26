@@ -28,8 +28,8 @@ const Destination = () => {
     }, []);
     
  return (
-    <div>
-      <div className=' mx-auto h-fit md:h-[805px] mt-[100px] md:mt-[180px]'>
+    <div id='famousDestination'>
+      <div className=' mx-auto h-fit md:h-[805px] mt-[100px] md:mt-[180px]' >
         {/* ----------- section heading and icons div ------------- */}
         <div className='flex justify-between'>
             {/* ------- heading div --------- */}

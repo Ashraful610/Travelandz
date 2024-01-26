@@ -7,10 +7,10 @@ import ContactForm from '../../Components/ContactForm';
 const HomePage = () => {
  return (
     <div className='h-fit'>
-        <Banner/>
-        <Features/>
-        <Destination/>
-        <ContactForm/>    
+      <Banner/>
+      <Features/>
+      <Destination/>
+      <ContactForm/>    
     </div>
  );
 };

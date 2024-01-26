@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import { IoIosArrowDown } from 'react-icons/io';
 import { TiUser } from "react-icons/ti";
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   const {pathname} = useLocation()
@@ -18,11 +19,15 @@ const Navbar = () => {
                 <img src={logo} alt="logo" className='w-[123px] h-[25px] md:w-[172.98px]  md:h-[35px]'/>
             </Link>
           </div>
-          {/* --------- navigation logo --------- */}
+          {/* --------- navigation link --------- */}
           <div className={`${pathname === '/travelPlanePage' ? 'hidden' : 'md:block hidden'}`}>
-            <a href="#" className=' text-[#1B1B1E] leading-5 '>About Travelandz</a>
-            <a href="#" className=' text-[#1B1B1E] leading-5 mx-[32px]'>Famous destinations</a>
-            <a href="#" className=' text-[#1B1B1E] leading-5 '>Contact us</a>
+            <HashLink to="#about" smooth className=' text-[#1B1B1E] leading-5 '>
+              About Travelandz
+            </HashLink>
+            <HashLink to="#famousDestination" smooth className=' text-[#1B1B1E] leading-5 mx-[32px]'>
+              Famous destinations
+            </HashLink>
+            <HashLink to="#contact" smooth className=' text-[#1B1B1E] leading-5'>Contact us</HashLink>
           </div>
           {/* ---------- user profile div ------- */}
           <div className={` w-[44px] h-[44px] p-3 rounded-full border ${pathname === '/travelPlanePage' ? 'hidden' : 'md:block hidden'}`}>
